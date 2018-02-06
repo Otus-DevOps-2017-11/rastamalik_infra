@@ -1,11 +1,12 @@
 {
   "variables": {
-    "proj_id": null,
-    "s_im_fam": null,
-    "m_type": "g1-small",
-    "snet_name": "default",
-    "mytags": ""
+
+    "project_id1": null,
+    "source_image_family1": null,
+    "machine_type1": null,
+    "zone1": null
   },
+  
   "builders": [
     {
       "type": "googlecompute",
@@ -21,12 +22,18 @@
       "subnetwork": "{{user `snet_name`}}",
       "ssh_username": "appuser",
       "machine_type": "{{user `m_type`}}"
+
     }
   ],
   "provisioners": [
     {
-      "type": "ansible",
-      "playbook_file": "ansible/playbooks/packer_app.yml"
+
+    "type": "ansible",
+    
+    "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{user `role_path` }}/ansible/roles"],
+    "playbook_file": "../ansible/playbooks/packer_app.yml"
+
+   
     }
   ]
 }

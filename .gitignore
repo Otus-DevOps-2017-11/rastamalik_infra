@@ -1,20 +1,23 @@
-# Terraform
+
+variables.json
+variables-*.json
+
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
 
-# Ansible
 *.retry
+.vscode
 jdauphant.nginx
+# Vagrant & Molecule
+
+#
 
 # Vagrant & molecule
-.vagrant/
+
 *.log
 *.pyc
 .molecule
 .cache
-
-# Packer
-variables.json
