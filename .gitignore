@@ -1,15 +1,22 @@
+
 variables.json
 variables-*.json
+
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
+
 *.retry
 .vscode
 jdauphant.nginx
 # Vagrant & Molecule
-.vagrant/
+
+#
+
+# Vagrant & molecule
+
 *.log
 *.pyc
 .molecule
